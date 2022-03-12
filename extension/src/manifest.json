@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Govdirectory Account Labeler",
+  "description": "A browser extension that uses Govdirectory to label accounts belonging to a government agency on various social media platforms.",
+  "version": "1.0.0",
+  "icons": {
+    "180": "icons/180.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://www.facebook.com/*"
+      ],
+      "js": [
+        "account_index.js",
+        "content_script.js"
+      ],
+      "css": [
+        "content_styles.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
