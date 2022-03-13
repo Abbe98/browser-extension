@@ -11,7 +11,7 @@ from hashlib import sha256
 snowman_cache_location = '.snowman/cache/'
 govdirectory_generators = 'queries/generators/'
 
-supported_platforms = ['twitter', 'facebook']
+supported_platforms = ['twitter', 'facebook', 'github']
 
 # parse location argument into a file path and return a list of files
 parser = argparse.ArgumentParser(description='Generate data from JSON files.')
@@ -73,14 +73,19 @@ for org in orgs:
 # very inefficient, I blame CoPilot
 facebook = filter(lambda x: x[0] == 'facebook', final_account_index)
 twitter = filter(lambda x: x[0] == 'twitter', final_account_index)
+github = filter(lambda x: x[0] == 'github', final_account_index)
 
+# please do not judge me
 json_index = dict()
 json_index['facebook'] = dict()
 json_index['twitter'] = dict()
+json_index['github'] = dict()
 for item in facebook:
     json_index['facebook'][item[2].lower()] = item[1]
 for item in twitter:
     json_index['twitter'][item[2].lower()] = item[1]
+for item in github:
+    json_index['github'][item[2].lower()] = item[1]
 
 print(json_index)
 

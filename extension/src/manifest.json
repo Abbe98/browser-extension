@@ -10,7 +10,8 @@
     {
       "matches": [
         "https://twitter.com/*",
-        "https://www.facebook.com/*"
+        "https://www.facebook.com/*",
+        "https://github.com/*"
       ],
       "js": [
         "account_index.js",

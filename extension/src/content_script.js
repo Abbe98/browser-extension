@@ -1,11 +1,15 @@
 function discoverAccount() {
   let accountName;
+  // TODO store the data (urls, case-sensitivity, etc) in an object and process that instead of using if/else
   if (document.location.origin == 'https://twitter.com') {
     accountName = cleanAccountName(document.location.pathname.substring(1), caseSensitive = false);
     return accountIndex.twitter[accountName];
   } else if (document.location.origin == 'https://www.facebook.com') {
     accountName = cleanAccountName(document.location.pathname.substring(1), caseSensitive = false);
     return accountIndex.facebook[accountName];
+  } else if (document.location.origin == 'https://github.com') {
+    accountName = cleanAccountName(document.location.pathname.substring(1), caseSensitive = false);
+    return accountIndex.github[accountName];
   }
 
   return;
