@@ -1,4 +1,8 @@
 /* Sites like Facebook seems to be doing their best to force one to write CSS like this */
+.govdirectory-browser-extension-namespace div {
+    display: block;
+}
+
 .govdirectory-browser-extension-namespace {
     position: fixed !important;
     bottom: 0 !important;

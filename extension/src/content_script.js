@@ -10,6 +10,15 @@ function discoverAccount() {
   } else if (document.location.origin == 'https://github.com') {
     accountName = cleanAccountName(document.location.pathname.substring(1), caseSensitive = false);
     return accountIndex.github[accountName];
+  } else if (document.location.origin == 'https://www.linkedin.com') {
+    accountName = cleanAccountName(document.location.pathname.substring(1).replace('company/', ''), caseSensitive = false);
+    return accountIndex.linkedin[accountName];
+  } else if (document.location.origin == 'https://www.instagram.com') {
+    accountName = cleanAccountName(document.location.pathname.substring(1), caseSensitive = false);
+    return accountIndex.instagram[accountName];
+  } else if (document.location.origin == 'https://www.youtube.com') {
+    accountName = cleanAccountName(document.location.pathname.substring(1).replace('channel/', ''), caseSensitive = false);
+    return accountIndex.youtube[accountName];
   }
 
   return;

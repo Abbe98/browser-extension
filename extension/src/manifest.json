@@ -11,7 +11,10 @@
       "matches": [
         "https://twitter.com/*",
         "https://www.facebook.com/*",
-        "https://github.com/*"
+        "https://github.com/*",
+        "https://www.linkedin.com/*",
+        "https://www.instagram.com/*",
+        "https://www.youtube.com/*"
       ],
       "js": [
         "account_index.js",
