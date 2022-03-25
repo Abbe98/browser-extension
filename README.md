@@ -1,4 +1,4 @@
-# Account Labeler Extension
+# Government Account Indicator
 
 **This is an early prototype.**
 
